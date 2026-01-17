@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(135deg, #8e9ee6 0%, #a16cd6 100%);
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.risk-badge {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+.risk-low {
+    background-color: #28a745;
+}
+
+.risk-medium {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.risk-high {
+    background-color: #dc3545;
+}
+
+.comparison-section {
+    display: none;
+}
+
+.loading {
+    display: none;
+}
+
+.code-block {
+    background-color: #f8f9fa;
+    border-left: 4px solid #667eea;
+    padding: 15px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.hero-section {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.btn-analyze {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 12px 40px;
+    font-size: 1.1rem;
+}
+
+.btn-analyze:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.suspicious-highlight {
+    background-color: #fff3cd;
+    border: 2px solid #ffc107;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 2px;
+    display: inline-block;
+}
