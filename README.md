@@ -1,12 +1,13 @@
 # SafePrompt - Prompt Injection Risk Analyzer
 
-A simple web application to analyze AI prompts for security risks and rewrite them safely.
+A simple web application to analyze AI prompts for security risks 
 
 ## Features
 
 - Analyze prompts for injection risks
-- Automatic safe prompt generation
 - Context-aware analysis
+- Multi-layer detection (heuristics + LLM)
+- Comprehensive test suite (85%+ coverage)
 
 ## Tech Stack
 
@@ -15,28 +16,27 @@ A simple web application to analyze AI prompts for security risks and rewrite th
 - **AI**: Anthropic Claude API
 
 ## Setup
+### Prerequisites
 
-### 1. Install Dependencies
+- Python 3.11+
+- Anthropic API key- Get your API key from: https://console.anthropic.com/
+# Clone repository
+git clone 
+cd safeguard-ai/backend
 
-```bash
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
-```
+pip install -r requirements-dev.txt  # For development
 
-### 2. Set Up API Key
-
-Copy the example environment file:
-```bash
+# Configure environment
 cp .env.example .env
+# Edit .env and add your ANTHROPIC_API_KEY
 ```
-
-Edit `.env` and add your Anthropic API key:
-```
-ANTHROPIC_API_KEY=sk-ant-...
-```
-
-Get your API key from: https://console.anthropic.com/
-
-### 3. Run the Application
+# Run the Application
 
 ```bash
 python main.py
@@ -47,9 +47,15 @@ Or with uvicorn directly:
 uvicorn main:app --reload
 ```
 
-### 4. Open in Browser
+# Open in Browser
 
 Navigate to: http://localhost:8000
+
+## Testing
+```bash
+# Run all tests
+pytest
+```
 
 ## Usage
 
@@ -87,17 +93,6 @@ Analyze a prompt for security risks.
 ### `GET /health`
 
 Health check endpoint.
-
-## Project Structure
-
-```
-.
-├── main.py              # FastAPI backend
-├── index.html           # Frontend UI
-├── requirements.txt     # Python dependencies
-├── .env.example        # Example environment variables
-└── README.md           # This file
-```
 
 ## Future Enhancements
 
