@@ -1,0 +1,37 @@
+[run]
+source = app
+omit = 
+    */tests/*
+    */conftest.py
+    */__init__.py
+    */test_*.py
+
+[report]
+# Fail if coverage below this percentage
+fail_under = 80
+
+# Don't show files with 100% coverage
+skip_covered = False
+
+# Show line numbers of missing coverage
+show_missing = True
+
+# Precision for coverage percentage
+precision = 2
+
+exclude_lines =
+    # Standard pragma
+    pragma: no cover
+    
+    # Debug-only code
+    def __repr__
+    
+    if self\.debug
+    
+    raise AssertionError
+    raise NotImplementedError
+
+    if __name__ == .__main__.:
+    
+    # Type checking
+    if TYPE_CHECKING:
